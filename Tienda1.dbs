@@ -7,6 +7,9 @@
 			<index name="pk_producto" unique="PRIMARY_KEY" >
 				<column name="id_producto" />
 			</index>
+			<fk name="fk_idProducto" to_schema="admon" to_table="venta" >
+				<fk_column name="id_producto" pk="idProducto" />
+			</fk>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
 		<table name="tienda" prior="t" >
@@ -29,6 +32,9 @@
 			</index>
 			<index name="unq_venta_idTienda" unique="UNIQUE_KEY" >
 				<column name="idTienda" />
+			</index>
+			<index name="unq_venta_idProducto" unique="UNIQUE_KEY" >
+				<column name="idProducto" />
 			</index>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
