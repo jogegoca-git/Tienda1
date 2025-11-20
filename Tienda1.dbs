@@ -4,6 +4,7 @@
 		<table name="producto" prior="produ" >
 			<column name="id_producto" type="INT" mandatory="y" unsigned="y" />
 			<column name="nombre" type="VARCHAR" length="100" />
+			<column name="precio" type="DECIMAL" length="10" decimal="2" />
 			<index name="pk_producto" unique="PRIMARY_KEY" >
 				<column name="id_producto" />
 			</index>
